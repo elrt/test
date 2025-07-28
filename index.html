@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Recubeim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+        }
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+        .header {
+            background: linear-gradient(to bottom, #2c3e50 0%, #1a2a3a 100%);
+            color: #ffffff;
+            padding: 10px 15px;
+            border-bottom: 1px solid #0d1a26;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .content {
+            display: flex;
+        }
+        .sidebar {
+            width: 180px;
+            background: #252525;
+            border-right: 1px solid #333;
+            padding: 10px 0;
+        }
+        .menu-item {
+            padding: 8px 15px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            color: #cccccc;
+        }
+        .menu-item:hover {
+            background: #333;
+        }
+        .menu-item.active {
+            background: #2c3e50;
+            border-left: 3px solid #4a7ec3;
+            color: white;
+        }
+        .main {
+            flex: 1;
+            padding: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #cccccc;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group select {
+            width: 250px;
+            padding: 5px;
+            border: 1px solid #444;
+            border-radius: 3px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+        .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .button {
+            background: linear-gradient(to bottom, #2c3e50 0%, #1a2a3a 100%);
+            border: 1px solid #0d1a26;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: linear-gradient(to bottom, #3c4e60 0%, #2a3a4a 100%);
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            color: #888;
+            border-top: 1px solid #333;
+            background-color: #252525;
+        }
+        .status-bar {
+            background: #252525;
+            padding: 5px 15px;
+            border-top: 1px solid #333;
+            font-size: 12px;
+            color: #888;
+        }
+        h2 {
+            color: #cccccc;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+        span {
+            color: #e0e0e0;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+        }
+        .game-screenshot {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border: 1px solid #444;
+            margin: 10px 0;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features-list li {
+            padding: 5px 0;
+            border-bottom: 1px dotted #333;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .gallery-item {
+            border: 1px solid #444;
+            padding: 5px;
+            background: #252525;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-caption {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 5px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Recubeim Official Site</h1>
+        </div>
+        <div class="status-bar">
+            Recubeim v1.0 | Status: Development Active
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="menu-item active" onclick="showPage('main')">Main</div>
+                <div class="menu-item" onclick="showPage('socials')">Socials</div>
+                <div class="menu-item" onclick="showPage('credits')">Credits</div>
+
+            </div>
+            <div class="main" id="main-content">
+                <!-- Главная страница -->
+                <div id="main-page" class="page-content active">
+                    <h2>Welcome to Recubeim</h2>
+                    <div class="form-group">
+                        <p>A retro-style sandbox game with 8x8 textures and charming 2D graphics, inspired by classic block-building games.</p>
+                    </div>
+                    
+
+                        <img src="images/screenshot.png" alt="Recubeim Game Screenshot">
+                   
+                    
+                    <div class="form-group">
+                        <h3>Current Version Features:</h3>
+                        <ul class="features-list">
+                            <li>Optimized gameplay</li>
+                            <li>Over 70 blocks</li>
+                            <li>Community</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h3>System Requirements:</h3>
+                        <div>
+                            <strong>Minimum/Recommended:</strong> Intel(R) Pentium(R) CPU N3710, 400MB-1GB RAM, jdk 17 (without java ver.)<br>
+                            <strong>Storage:</strong> 500MB available space
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Страница Socials -->
+                <div id="socials-page" class="page-content">
+                    <h2>Our Social Networks</h2>
+                    <div class="form-group">
+                        <p>Connect with us on social media:</p>
+                        <ul>
+                            <li><strong>Discord:</strong> <a href="https://discord.gg/zDzrapPsUp" style="color:#4a7ec3;">link</a></li>
+                            <li><strong>Bluesky:</strong> <a href="https://leafprod.bsky.social" style="color:#4a7ec3;">link</a></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <p>Join our communities for updates, support, and to connect with other players.</p>
+                    </div>
+                </div>
+
+                <!-- Страница Credits -->
+                <div id="credits-page" class="page-content">
+                    <h2>Credits</h2>
+                    <div class="form-group">
+                        <p><strong>Development Team:</strong></p>
+                        <ul>
+                            <li><strong>Owner/Lead Developer:</strong> Elliktronic</li>
+                            <li><strong>Pixel Artist:</strong> Pluto</li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <p><strong>Special Thanks:</strong></p>
+                        <p>To our community:D</p>
+                    </div>
+                    <div class="form-group">
+                        <p><strong>First Release Date:</strong> 14 March 2025</p>
+                        <p><strong>Latest Update:</strong> 28 July 2025</p>
+                    </div>
+
+                </div>
+                
+                <!-- Страница Gallery -->
+                <div id="gallery-page" class="page-content">
+                    <h2>Game Gallery</h2>
+                    <div class="form-group">
+                        <p>Check out these screenshots from Recubeim:</p>
+                    </div>
+                    
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/screenshot1.png" alt="World Generation">
+                            <div class="gallery-caption">World Generation</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/screenshot2.png" alt="Building Example">
+                            <div class="gallery-caption">Building Example</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/screenshot3.png" alt="Night Time">
+                            <div class="gallery-caption">Night Time</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/screenshot4.png" alt="Crafting Menu">
+                            <div class="gallery-caption">Crafting Menu</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <button class="button">View More Screenshots</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Recubeim © 2025 | All Rights Not Reserved
+        </div>
+    </div>
+
+    <script>
+        function showPage(page) {
+            // Убираем активный класс у всех пунктов меню
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Добавляем активный класс к выбранному пункту меню
+            event.target.classList.add('active');
+            
+            // Скрываем все страницы
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Показываем выбранную страницу
+            document.getElementById(page + '-page').classList.add('active');
+        }
+    </script>
+</body>
+</html>
