@@ -171,7 +171,7 @@
 
             </div>
             <div class="main" id="main-content">
-                <!-- Главная страница -->
+
                 <div id="main-page" class="page-content active">
                     <h2>Welcome to Recubeim</h2>
                     <div class="form-group">
@@ -200,7 +200,7 @@
                     </div>
                 </div>
 
-                <!-- Страница Socials -->
+
                 <div id="socials-page" class="page-content">
                     <h2>Our Social Networks</h2>
                     <div class="form-group">
@@ -215,7 +215,7 @@
                     </div>
                 </div>
 
-                <!-- Страница Credits -->
+
                 <div id="credits-page" class="page-content">
                     <h2>Credits</h2>
                     <div class="form-group">
@@ -236,7 +236,7 @@
 
                 </div>
                 
-                <!-- Страница Gallery -->
+
                 <div id="gallery-page" class="page-content">
                     <h2>Game Gallery</h2>
                     <div class="form-group">
@@ -275,22 +275,21 @@
 
     <script>
         function showPage(page) {
-            // Убираем активный класс у всех пунктов меню
+
             const menuItems = document.querySelectorAll('.menu-item');
             menuItems.forEach(item => {
                 item.classList.remove('active');
             });
             
-            // Добавляем активный класс к выбранному пункту меню
             event.target.classList.add('active');
             
-            // Скрываем все страницы
+
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Показываем выбранную страницу
+
             document.getElementById(page + '-page').classList.add('active');
         }
     </script>
