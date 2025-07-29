@@ -115,7 +115,7 @@
             display: none;
         }
         .page-content.active {
-            display: block;
+        display: block;
         }
         .game-screenshot {
             width: 100%;
@@ -139,9 +139,9 @@
             margin-top: 15px;
         }
         .gallery-item {
-            border: 1px solid #444;
-            padding: 5px;
-            background: #252525;
+        border: 1px solid #444;
+        padding: 5px;
+        background: #252525;
         }
         .gallery-item img {
             width: 100%;
@@ -161,14 +161,12 @@
             <h1>Recubeim Official Site</h1>
         </div>
         <div class="status-bar">
-            Recubeim v1.0 | Status: Development Active
+        Recubeim v1.0 | Status: Development Active
         </div>
         <div class="content">
             <div class="sidebar">
                 <div class="menu-item active" onclick="showPage('main')">Main</div>
-                <div class="menu-item" onclick="showPage('socials')">Socials</div>
                 <div class="menu-item" onclick="showPage('credits')">Credits</div>
-
             </div>
             <div class="main" id="main-content">
 
@@ -203,22 +201,6 @@
                     </div>
                 </div>
 
-
-                <div id="socials-page" class="page-content">
-                    <h2>Our Social Networks</h2>
-                    <div class="form-group">
-                        <p>Connect with us on social media:</p>
-                        <ul>
-                            <li><strong>Discord:</strong> <a href="https://discord.gg/zDzrapPsUp" style="color:#4a7ec3;">link</a></li>
-                            <li><strong>Bluesky:</strong> <a href="https://leafprod.bsky.social" style="color:#4a7ec3;">link</a></li>
-                        </ul>
-                    </div>
-                    <div class="form-group">
-                        <p>Join our communities for updates, support, and to connect with other players.</p>
-                    </div>
-                </div>
-
-
                 <div id="credits-page" class="page-content">
                     <h2>Credits</h2>
                     <div class="form-group">
@@ -236,38 +218,6 @@
                         <p><strong>First Release Date:</strong> 14 March 2025</p>
                         <p><strong>Latest Update:</strong> 28 July 2025</p>
                     </div>
-
-                </div>
-                
-
-                <div id="gallery-page" class="page-content">
-                    <h2>Game Gallery</h2>
-                    <div class="form-group">
-                        <p>Check out these screenshots from Recubeim:</p>
-                    </div>
-                    
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="images/screenshot1.png" alt="World Generation">
-                            <div class="gallery-caption">World Generation</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/screenshot2.png" alt="Building Example">
-                            <div class="gallery-caption">Building Example</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/screenshot3.png" alt="Night Time">
-                            <div class="gallery-caption">Night Time</div>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="images/screenshot4.png" alt="Crafting Menu">
-                            <div class="gallery-caption">Crafting Menu</div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group" style="margin-top: 20px;">
-                        <button class="button">View More Screenshots</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -278,7 +228,6 @@
 
     <script>
         function showPage(page) {
-
             const menuItems = document.querySelectorAll('.menu-item');
             menuItems.forEach(item => {
                 item.classList.remove('active');
@@ -286,13 +235,11 @@
             
             event.target.classList.add('active');
             
-
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => {
                 page.classList.remove('active');
             });
             
-
             document.getElementById(page + '-page').classList.add('active');
         }
     </script>
